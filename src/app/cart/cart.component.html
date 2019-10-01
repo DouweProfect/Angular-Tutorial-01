@@ -14,6 +14,6 @@
   <button (click)="clear()">Empty Cart</button>
 </p>
 
-<form [formGroup]="checkoutForm">
-  <button class="button" type="submit">Purchase</button>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+    <button class="button" type="submit">Purchase</button>
 </form>
