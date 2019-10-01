@@ -9,3 +9,7 @@
   <span>{{ item.price | currency }}</span>
   <span><button (click)="remove()">Remove</button></span>
 </div>
+
+<p *ngIf="items.length > 0">
+  <button (click)="clear()">Empty Cart</button>
+</p>
