@@ -4,10 +4,10 @@
   <a routerLink="/shipping">Shipping Prices</a>
 </p>
 
-<div class="cart-item" *ngFor="let item of items">
+<div class="cart-item" *ngFor="let item of items; index as index">
   <span>{{ item.name }}</span>
   <span>{{ item.price | currency }}</span>
-  <span><button (click)="remove()">Remove</button></span>
+  <span><button (click)="remove(index)">Remove</button></span>
 </div>
 
 <p *ngIf="items.length > 0">

@@ -15,8 +15,9 @@ export class CartService {
     this.items.push(product);
   }
 
-  removeFromCart(product) {
-    return this.items.filter(p => p.name != product.name);
+  removeFromCart(index) {
+    this.items.splice(index, 1)
+    return this.items
   }
 
   getItems() {
