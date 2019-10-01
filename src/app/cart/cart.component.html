@@ -14,7 +14,7 @@
   <button (click)="clear()">Empty Cart</button>
 </p>
 
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)" *ngIf="items.length > 0">
   <div>
     <label for="name">
       Name
